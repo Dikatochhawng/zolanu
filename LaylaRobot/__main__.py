@@ -233,7 +233,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             DLYNN, caption= "<b>In tan Lynn ka awm reng e</b>",
-            parse_mode=ParseMode.HTML,
+            parse_mode=ParseMode.HTML
             ),
             reply_markup=InlineKeyboardMarkup(
                 [
