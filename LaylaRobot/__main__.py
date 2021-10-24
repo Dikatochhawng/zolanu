@@ -75,6 +75,8 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+DLYNN = "https://telegra.ph/file/13bfc9bb06beb9bb38df6.jpg"
+
 
 PM_START_TEXT = """
 『Chibai le hmelthate🥰, Kei hi *Lynn chawngthu* ka ni a, 』
@@ -229,11 +231,24 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_animation(
-            GROUP_START_IMG, caption= "<code>In tan Lynn ka awm reng e💜\nLynn Is  Awake Since</code>: <code>{}</code>".format(
-                uptime
+        update.effective_message.reply_photo(
+            DLYNN, caption= "<b>In tan Lynn ka awm reng e</b>"
             ),
             parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Support Group",
+                            url="https://t.me/lynnsupportgroup",
+                        ),
+                        InlineKeyboardButton(
+                            text="Android Users",
+                            url="https://t.me/puituflynn",
+                        ),
+                    ],
+                ]
+            ),
         )
 
 
