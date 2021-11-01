@@ -195,4 +195,4 @@ The bot is based on the original work done by [PaulSonOfLars](https://github.com
 
 
 
-## [OWNER HERO](http://t.me/Didiktea)
+## [BOT OWNER](http://t.me/Didiktea)
