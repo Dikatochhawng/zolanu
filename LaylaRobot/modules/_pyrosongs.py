@@ -4,7 +4,7 @@
 import os
 import requests
 import aiohttp
-import youtube_dl
+from yt_dlp import YoutubeDL
 
 from pyrogram import filters
 from LaylaRobot import pbot
@@ -53,7 +53,7 @@ def song(client, message):
         return
     m.edit("`Downloading Song... Please wait ⏱`")
     try:
-        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        with YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
